@@ -24,7 +24,7 @@ export default {
       const filtro = this.$route.params.filtro;
       console.log(filtro);
       return this.alumnosData.filter((instrumento) => {
-        return (instrumento.legajo.indexOf(parseInt(filtro)) > -1 )
+        return (String(instrumento.legajo).startsWith(filtro) )
       });
     },
   },
